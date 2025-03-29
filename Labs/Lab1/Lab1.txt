@@ -1,0 +1,100 @@
+//Jaeden Salandanan 
+//101324631
+
+//1.1
+var temperature: Float = -7
+temperature = 10
+
+//1.2
+let secondsInHour = 3600
+//Assigning new value will give error because contants cannot be reassigned
+
+//1.3
+var explicitInt: Int = 25
+print(explicitInt)
+var inferredInt = 25
+print(inferredInt)
+
+//1.4
+let numWheelsOfCar: Int
+
+numWheelsOfCar = 4
+//Works because constant was declared but not initialized. Able to be assigned one time
+
+//1.5
+let π = 3.141592653589793
+
+//1.6
+var 🍔 = "Burger"
+
+//1.7
+print(🍔)
+
+//1.8
+print(Int16.max) //Max value is 32767
+
+//1.9
+//let pi = 3 + 0.141592654
+//The type is Double because Swifts pre-defined data type for floating point is Double
+
+//1.10
+//let myNumber: UInt = -17
+//Causes error because UInt cannot hole negatives
+
+//1.11
+//let bigNumber: Int16 = 32767 + 1
+//Causes overflow error because max value is 32767
+
+//1.12
+let pi = 3.141592654
+let approximatePi: Int = Int(pi)
+//Need to use explicit type casting to convert from Double to Int
+
+//1.13
+let valueA: Int16 = -0x8000
+let valueB: Int16 = 0x4000 << 1
+print(valueA == valueB)
+//valueA is equal to -32768 in Int16, while valueB is equal to 0x8000 which is also equal to -32768 in Int 16.
+
+//1.14
+// Single-line comment
+
+/*
+ Here is a
+ multi-line comment
+ */
+ 
+ //1.15
+/* This is a multiline comment
+   /* Nested multiline comment */
+   Continuation of multiline comment
+*/
+
+//1.16
+let player = (number: 23, name: "Michael Jordan")
+print("The player is", player.name, "his number is" ,player.number)
+
+//1.17
+//Access by name
+let number = player.number
+let name = player.name
+
+//Ignore unused values with underscore
+let (justNumber, _) = player
+
+//Tuple decomposition
+let (playerNumber, playerName) = player
+
+
+
+
+
+
+
+
+
+
+
+
+
+

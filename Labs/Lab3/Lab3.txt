@@ -1,0 +1,83 @@
+//Jaeden Salandanan
+//101324631
+
+//3.1
+var sampleArray1: Array<Int> = []
+var sampleArray2: [Int] = []
+var sampleArray3 = Array<Int>()
+var sampleArray4 = [Int]()
+
+//3.2
+var array1: Array<Int> = [4, 8, 15, 16, 23, 42]
+var array2: [Int] = [4, 8, 15, 16, 23, 42]
+var array3 = [4, 8, 15, 16, 23, 42]
+var array4 = Array<Int>([4, 8, 15, 16, 23, 42])
+
+//3.3
+let immutableArray = [4, 8, 15, 16, 23, 42]
+
+//3.4
+var stuff = [4, 8, 15, 16, 23, 42]
+stuff.append(contentsOf: [1138, 1337, 4711])
+print(stuff)
+
+//3.5
+var numbers = [4, 8, 15, 16, 23, 42]
+if let index = numbers.firstIndex(of: 15) {
+    numbers[index] = 17
+    print(numbers)
+}
+
+//3.6
+var numbers2 = [4, 8, 15, 16, 23, 42]
+numbers2.replaceSubrange(2...4, with: [1, 2, 3, 4, 5])
+print(numbers2)
+
+//3.7
+let sheepArray = Array(repeating: "🐑", count: 10)
+print(sheepArray.count)
+
+//3.8
+var deleteLast = [4, 8, 15, 16, 23, 42]
+deleteLast.removeLast()
+print(deleteLast)
+
+//3.9
+let houseAnimals: Set = ["🐶", "🐱"]
+let farmAnimals: Set = ["🐮", "🐔", "🐑", "🐶", "🐱"]
+let cityAnimals: Set = ["🐦", "🐭"]
+
+print(houseAnimals.isSubset(of: farmAnimals))
+
+print(farmAnimals.isSuperset(of: houseAnimals))
+
+print(farmAnimals.isDisjoint(with: cityAnimals))
+
+print(farmAnimals.subtracting(houseAnimals))
+
+print(farmAnimals.union(houseAnimals).union(cityAnimals))
+
+//3.10
+var dict1: [String: Int] = [:]
+var dict2 = [String: Int]()
+var dict3: Dictionary<String, Int> = [:]
+var dict4 = Dictionary<String, Int>()
+
+//3.11
+var secretIdentities = ["Hulk": "Bruce Banner", "Batman": "Bruce Wayne", "Superman": "Clark Kent"]
+
+//3.12
+print(secretIdentities["Batman"]!)
+
+//3.13
+secretIdentities["Hulk"] = "David Banner"
+print(secretIdentities["Hulk"]!)
+
+//3.14
+for (hero, identity) in secretIdentities {
+    print("\(hero)'s secret identity is \(identity).")
+}
+
+
+
+

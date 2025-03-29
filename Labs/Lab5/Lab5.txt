@@ -1,0 +1,146 @@
+//Jaeden Salandanan
+//101324631
+
+//5.1
+for i in 1...5 {
+    print(i)
+}
+
+//5.2
+let array = [1, 2, 3, 4, 5]
+for value in array {
+    print(value)
+}
+
+//5.3
+let nums = [2, 6, 11, 19, 25]
+for index in 0..<nums.count {
+    print(nums[index])
+}
+
+//5.4
+let nums2 = [2, 6, 11, 19, 25]
+for (index, value) in nums2.enumerated() {
+    print("Index: \(index), Value: \(value)")
+}
+
+//5.5
+var counter = 0
+while counter < 10 {
+    counter += 1
+}
+print(counter)
+
+//5.6
+var counter2 = 0
+repeat {
+    counter2 += 1
+} while counter2 < 10
+print(counter2)
+
+//5.7
+let temperature = -32
+if temperature >= 30 {
+    print("It's too hot")
+} else if temperature < 0 {
+    print("It's too cold")
+} else {
+    print("It's tolerable")
+}
+
+//5.8
+let str = "1337"
+if let value = Int(str), value == 1337 {
+    print("The value is 1337")
+}
+
+//5.9
+let value = 1337
+switch value {
+case 1337:
+    print("elite")
+case 42:
+    print("the meaning of life")
+default:
+    print("some number")
+}
+
+//5.10
+let value2 = 1337
+switch value2 {
+case 42, 1337, 4711:
+    print("a number we care about")
+default:
+    print("who cares")
+}
+
+//5.11
+let animal = "tiger"
+switch animal {
+case "tiger":
+    print("Animal is a tiger")
+    fallthrough
+case "cat":
+    print("Animal is a cat")
+default:
+    print("Animal is some other type of animal")
+}
+
+//5.12
+let distance: UInt = 10
+switch distance {
+case 0:
+    print("Here")
+case 1..<5:
+    print("Immediate vicinity")
+case 5...15:
+    print("Near")
+case 16...40:
+    print("Kind of far")
+default:
+    print("Far")
+}
+
+//5.13
+let vector3D = (x: 3, y: 2, z: 5)
+switch vector3D {
+case (_, let y, 5), (12, let y, _):
+    print(y)
+default:
+    break
+}
+
+//5.14
+let vector3Dsecond = (x: 3, y: 2, z: 6)
+switch vector3Dsecond {
+case let (x, y, z) where z == y * 3:
+    print(x)
+default:
+    break
+}
+
+//5.15
+//2 guard statements
+func printIfPositiveInteger2(number: String) {
+    guard let value = Int(number) else { return }
+    guard value > 0 else { return }
+
+    print(value)
+}
+
+//1 compound guard statement
+func printIfPositiveInteger3(number: String) {
+    guard let value = Int(number), value > 0 else { return }
+
+    print(value)
+}
+
+printIfPositiveInteger2(number: "abc")
+printIfPositiveInteger2(number: "-10")
+printIfPositiveInteger2(number: "10")
+
+printIfPositiveInteger3(number: "abc")
+printIfPositiveInteger3(number: "-10")
+printIfPositiveInteger3(number: "10")
+
+

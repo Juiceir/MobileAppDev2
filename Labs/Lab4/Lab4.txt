@@ -1,0 +1,91 @@
+//Jaeden Salandanan
+//101324631
+
+//4.1
+func printHelloWorld() {
+    print("Hello World!")
+}
+printHelloWorld()
+
+//4.2
+func greeting1(name: String) {
+    print("Hello, \(name)!")
+}
+greeting1(name: "Donald Trump")
+
+//4.3
+func greeting2(name: String) -> String {
+    return "Hello, \(name)!"
+}
+print(greeting2(name: "Donald Trump"))
+
+//4.4
+func greeting3(firstName: String, lastName: String) {
+    print("Hello, \(firstName) \(lastName)!")
+}
+greeting3(firstName: "Donald", lastName: "Trump")
+
+//4.5
+func split(name: String) -> (String, String?) {
+    let names = name.split(separator: " ").map { String($0) }
+    
+    if names.count >= 2 {
+        let firstName = names[0]
+        let lastName = names.dropFirst().joined(separator: " ")
+        return (firstName, lastName)
+    } else if names.count == 1 {
+        return (names[0], nil) 
+    } else {
+        return ("", nil)  
+    }
+}
+
+func printResult(_ result: (String, String?)) {
+    let firstName = result.0
+    let lastName = result.1 ?? "nil"
+    print("(\(firstName), \(lastName))")
+}
+
+let result1 = split(name: "Donald Trump")
+printResult(result1)  
+
+let result2 = split(name: "Batman")
+printResult(result2)  
+
+let result3 = split(name: "")
+printResult(result3)
+
+let result4 = split(name: "Dwayne 'The Rock' Johnson")
+printResult(result4)
+
+//4.6
+func square(value: Int) -> Int {
+    return value * value
+}
+
+let squareResult = square(value: 5) 
+print(squareResult)
+
+//4.7
+func whoAmI(name: String = "Bruce Wayne") -> String {
+    if name == "Bruce Wayne" {
+        return "I am Batman"
+    } else {
+        return "I am not Batman"
+    }
+}
+
+print(whoAmI(name: "Bruce Wayne"))
+print(whoAmI(name: "Donald Trump"))
+
+//4.8
+func sum(numbers: Int...) -> Int {
+    return numbers.reduce(0, +)
+}
+
+print(sum(numbers: 99, 5, 32, 20))
+
+
+
+
+
